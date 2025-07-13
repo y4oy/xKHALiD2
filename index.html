@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HACKED BY xKHALiD</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: url('https://media.wickdev.me/965425c0cd.png') center/cover no-repeat;
+      font-family: 'Courier New', monospace;
+      overflow: hidden;
+      animation: bloodPulse 2.5s infinite alternate;
+    }
+
+    @keyframes bloodPulse {
+      0% { filter: brightness(0.6) saturate(1.2); }
+      100% { filter: brightness(0.9) saturate(2); }
+    }
+
+    body.shake {
+      animation: shake 0.5s ease-in-out infinite;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translate(0px, 0px); }
+      25% { transform: translate(-5px, 5px); }
+      50% { transform: translate(5px, -5px); }
+      75% { transform: translate(-5px, -5px); }
+    }
+
+    .main-title {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 60px;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 0 0 10px red, 0 0 20px darkred, 0 0 30px black;
+      animation: zoomIn 2s ease-in-out;
+      z-index: 4;
+    }
+
+    @keyframes zoomIn {
+      0% { transform: scale(0) translate(-50%, -50%); opacity: 0; }
+      100% { transform: scale(1) translate(-50%, -50%); opacity: 1; }
+    }
+
+    .black-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      animation: fadeOut 1s ease-out 2.5s forwards;
+      font-size: 24px;
+      color: red;
+      text-shadow: 0 0 10px red;
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    .image-box {
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 550px;
+      height: 300px;
+      border: 3px solid red;
+      border-radius: 10px;
+      box-shadow: 0 0 20px red, 0 0 50px darkred;
+      overflow: hidden;
+      animation: pulse 1.2s infinite alternate;
+      z-index: 2;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes pulse {
+      from { box-shadow: 0 0 10px red; }
+      to { box-shadow: 0 0 40px darkred; }
+    }
+
+    .box-center {
+      position: absolute;
+      top: 77%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 22px;
+      color: #fff;
+      text-shadow: 0 0 5px red, 0 0 10px darkred, 0 0 20px black;
+      background: rgba(0,0,0,0.6);
+      padding: 20px;
+      border: 2px solid red;
+      border-radius: 10px;
+      font-weight: bold;
+      z-index: 2;
+    }
+
+    .top-box {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 15px 30px; 
+      font-size: 22px; 
+      font-weight: bold; 
+      background: rgba(0, 0, 0, 0.6);
+      border: 2px solid red;
+      color: #fff;
+      text-shadow: 0 0 5px red, 0 0 10px black;
+      border-radius: 10px;
+      z-index: 3;
+    }
+
+    .terminal {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      background: rgba(0,0,0,0.8);
+      border: 2px solid red;
+      border-radius: 10px;
+      color: #0f0;
+      font-family: 'Courier Prime', monospace;
+      font-size: 16px;
+      box-shadow: 0 0 20px red, 0 0 40px darkred;
+      padding: 10px;
+      z-index: 2;
+    }
+
+    .terminal-header {
+      display: flex;
+      align-items: center;
+      padding: 5px 10px;
+      background: rgba(255,0,0,0.2);
+      border-bottom: 1px solid red;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .terminal-buttons {
+      display: flex;
+      gap: 5px;
+    }
+
+    .terminal-button {
+      width: 12px;
+      height: 12px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .terminal-title {
+      margin-left: 10px;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    #matrixCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1; 
+      pointer-events: none;
+    }
+
+    @keyframes electricFlash {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 10px red, 0 0 20px white, 0 0 40px red;
+  }
+  20%, 22%, 24%, 55% {
+    opacity: 0.2;
+    text-shadow: none;
+  }
+}
+.main-title {
+  animation: electricFlash 2s infinite;
+}
+
+  </style>
+</head>
+<body class="shake">
+
+<canvas id="matrixCanvas"></canvas>
+
+<div class="black-screen">
+  SECURITY ALERT - xKHALiD IN THE SYSTEM<br><br>
+  DISCORD.GG/FX1
+</div>
+
+<audio autoplay loop>
+  <source src="https://a.top4top.io/m_3479s3blf1.mp4" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<div class="main-title">HACKED BY xKHALiD</div>
+
+<div class="top-box">
+  JOIN OUR DISCORD<br>
+  ➤ DISCORD.GG/FX1
+</div>
+
+<div class="image-box">
+  <img src="https://media.wickdev.me/8b2c14b762.png" alt="Scary Image">
+</div>
+
+<div class="terminal">
+  <div class="terminal-header">
+    <div class="terminal-buttons">
+      <div class="terminal-button"></div>
+      <div class="terminal-button"></div>
+      <div class="terminal-button"></div>
+    </div>
+    <div class="terminal-title">root@xKHALiD:~# mission_status</div>
+  </div>
+  <div style="font-family: 'Courier Prime', monospace; line-height: 2.0;">
+    <div style="color: silver; font-size: 20px;">
+      server@system:~$ <span style="color: white;">why?</span>
+    </div>
+        <div style="margin: 10px 0;">
+      [✓] Firewall bypassed<br>
+      [✓] Database accessed<br>
+      [✓] Admin privileges escalated<br>
+      [✓] Backdoor installed<br>
+      [💀⃤] HACKED BY xKHALiD
+    </div>
+  </div>
+</div>
+
+<script>
+  const canvas = document.getElementById('matrixCanvas');
+  const ctx = canvas.getContext('2d');
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  const letters = '01▓▒░';
+  const fontSize = 16;
+  const columns = Math.floor(canvas.width / fontSize);
+  const drops = new Array(columns).fill(1);
+
+  function drawMatrix() {
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = '#ff0000'; 
+    ctx.font = fontSize + 'px Courier New';
+
+    for (let i = 0; i < drops.length; i++) {
+      const char = letters.charAt(Math.floor(Math.random() * letters.length));
+      ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  }
+
+  setInterval(drawMatrix, 50);
+</script>
+
+</body>
+</html>
